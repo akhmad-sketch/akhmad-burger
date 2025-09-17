@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>МОЩНЫЙ СОЧНЫЙ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./assets/icons.svg" />
+</head>
+<body>
+    <div class="main">
+        <header>
+            <img src="./assets/logo.png" alt="logo" />
+            <nav>
+                <a href="">HOME</a>
+                <a href="">PAGES</a>
+                <a href="">OUR OFFER</a>
+                <a href="">PRICING</a>
+                <a href="">SHOP</a>
+            </nav>
+            <button class="cart-btn">CART</button>
+        </header>
+        <section class="first">
+            <h2>FAST FOOD BURGERS</h2>
+            <h1>The fastest food, for<br />instant hunger.</h1>
+            <p>
+                Some food has looked so awful that it's looked like something<br />
+                that the dog's brought home, yet after one mouthful I've been left<br />
+                eating my thoughts, my words & my food and gone back for<br />
+                seconds.
+            </p>
+            <button onclick="document.getElementById('orders').scrollIntoView({ behavior: 'smooth' })">ORDER NOW</button>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </section>
+    </div>
+    <section class="second">
+        <img src="./assets/product1.png" alt="" />
+        <img src="./assets/product2.png" alt="" />
+        <img src="./assets/product3.png" alt="" />
+        <img src="./assets/product4.png" alt="" />
+    </section>
+    <section class="third">
+        <div class="third-left">
+            <img src="./assets/burger.png" alt="" />
+        </div>
+        <div class="third-right">
+            <h1>Burger King</h1>
+            <p>
+                Together with McDonald’s, Burger King has grown<br />
+                to become synonymous with burgers in the US.
+            </p>
+            <div class="price">
+                <h1>$5</h1>
+                <h2><del>$7</del></h2>
+            </div>
+            <button onclick="document.getElementById('orders').scrollIntoView({ behavior: 'smooth' })">ORDER NOW</button>
+        </div>
+    </section>
+    <section class="orders" id="orders">
+        <div class="cards">
+            <div class="order-left">
+                <div class="card1 order-card" data-name="Dairy Queen" data-price="4" data-img="./assets/order1.png">
+                    <h1>Dairy Queen</h1>
+                    <p>Dairy Queen is one of the biggest<br />fast-food.</p>
+                    <div class="money">
+                        <h1>$4</h1>
+                        <h2><del>$6</del></h2>
+                    </div>
+                    <button>ORDER NOW</button>
+                </div>
+                <div class="card3 order-card" data-name="Burger King" data-price="5" data-img="./assets/order3.png">
+                    <h1>Burger King</h1>
+                    <p>Together with McDonald’s, Burger<br />King.</p>
+                    <div class="money">
+                        <h1>$5</h1>
+                        <h2><del>$7</del></h2>
+                    </div>
+                    <button>ORDER NOW</button>
+                </div>
+            </div>
+            <div class="order-right">
+                <div class="card2 order-card" data-name="Pizza Hut" data-price="3" data-img="./assets/order2.png">
+                    <h1>Pizza Hut</h1>
+                    <p>Although the Pizza Hut Menu<br />Prices.</p>
+                    <div class="money">
+                        <h1>$3</h1>
+                        <h2><del>$7</del></h2>
+                    </div>
+                    <button>ORDER NOW</button>
+                </div>
+                <div class="card4 order-card" data-name="Papa John’s" data-price="6" data-img="./assets/order4.png">
+                    <h1>Papa John’s</h1>
+                    <p>Papa John’s is one of the most<br />popular fast-food.</p>
+                    <div class="money">
+                        <h1>$6</h1>
+                        <h2><del>$8</del></h2>
+                    </div>
+                    <button>ORDER NOW</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feedback">
+        <img src="./assets/Feedback.png" alt="" />
+    </section>
+    <section class="download">
+        <h1>Download Our Menu</h1>
+        <button>DOWNLOAD</button>
+    </section>
+    <footer>
+        <div class="columns">
+            <div class="column">
+                <img src="./assets/logo.png" alt="" />
+                <a class="logo-text" href="">fastfood_usa@gmail.com</a>
+                <a class="logo-text" href="">www.fastfood_usa.com</a>
+            </div>
+            <div class="column">
+                <h3>Our Menu</h3>
+                <a href="">Breakfast</a>
+                <a href="">Lunce</a>
+                <a href="">Dinner</a>
+            </div>
+            <div class="column">
+                <h3>Information</h3>
+                <a href="./about.html">About us</a>
+                <a href="">Testimonial</a>
+                <a href="">Event</a>
+            </div>
+            <div class="column">
+                <h3>Useful Links</h3>
+                <a href="">Services</a>
+                <a href="">Support</a>
+                <a href="https://cdn1.ozone.ru/s3/multimedia-1-q/c600/7074653174.jpg">Conditions</a>
+            </div>
+            <div class="social">
+                <h3>Social Handles</h3>
+                <div class="social-img">
+                    <img src="./assets/facebook.png" alt="" />
+                    <img src="./assets/twitter.png" alt="" />
+                    <img src="./assets/instagram.png" alt="" />
+                    <img src="./assets/linkedin.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cart" class="cart-sidebar">
+        <div class="cart-content">
+            <h2>Корзина</h2>
+            <ul id="cart-items"></ul>
+            <p>Итог: $<span id="total">0</span></p>
+            <div class="cart-buttons">
+                <button id="clear-cart">Очистить корзину</button>
+                <button id="checkout">Заказать</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

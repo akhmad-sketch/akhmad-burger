@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Оформление заказа</title>
+  <link rel="stylesheet" href="checkout.css" />
+  <link rel="icon" href="./assets/icons.svg">
+</head>
+<body>
+  <div class="checkout-container">
+    <h1>Оформление заказа</h1>
+    <div id="cart-summary"></div>
+
+    <form id="payment-form">
+      <h2>Информация о покупателе</h2>
+
+      <label>
+        Имя:
+        <input type="text" name="name" required />
+      </label>
+
+      <label>
+        Адрес доставки:
+        <input type="text" name="address" required />
+      </label>
+
+      <label>
+        Номер карты:
+        <input type="text" name="card" required placeholder="**** **** **** ****" />
+      </label>
+
+      <label>
+        Срок действия:
+        <input type="text" name="expiry" required placeholder="MM/YY" />
+      </label>
+
+      <label>
+        CVC:
+        <input type="text" name="cvc" required placeholder="***" />
+      </label>
+
+      <button type="submit">Подтвердить заказ</button>
+    </form>
+  </div>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
