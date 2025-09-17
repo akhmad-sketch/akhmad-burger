@@ -81,3 +81,17 @@ orderButtons.forEach(btn => {
         openCart();
     });
 });
+
+const burgerMenu = document.getElementById('burger-menu');
+const mainNav = document.getElementById('main-nav');
+
+burgerMenu.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+});
+
+// Закрытие меню при клике на ссылку
+document.querySelectorAll('#main-nav a, #main-nav button').forEach(el => {
+    el.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+    });
+});
