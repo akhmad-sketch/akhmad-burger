@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Фоновое изображение и затемнение */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./assets/main-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.3); /* затемнение */
+    z-index: -1;
+}
+
+h1 {
+    color: #F6762C;
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+p {
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+a {
+    color: hsl(22, 92%, 57%);
+    text-decoration: none;
+}
+
+/* Для планшетов и десктопов */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
